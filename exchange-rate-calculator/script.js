@@ -21,10 +21,7 @@ function calculate() {
     .then((res) => res.json())
     .then((data) => {
       const rate = data.conversion_rates[currencyTwo];
-      console.log("rate::", rate);
-
       rateElem.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
-
       amountTwo.value = (amountOne.value * rate).toFixed(2);
     });
 }
